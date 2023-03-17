@@ -1,0 +1,18 @@
+.nav-ul li{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+  }
+  .nav-ul{
+    padding: 5px;
+    margin: 0px;
+    background-color: rgb(17, 172, 120);
+    width: 100%;
+  }
+
+
+  .nav-ul li a{
+    color: white;
+    text-decoration: none;
+  }
+ 

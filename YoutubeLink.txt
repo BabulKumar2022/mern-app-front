@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=1tjzs9l9PJw&list=PL8p2I9GklV44v3vZb2Xlc0HVpJaghCuoN&index=1
+
+https://www.youtube.com/watch?v=1tjzs9l9PJw&list=PL8p2I9GklV44v3vZb2Xlc0HVpJaghCuoN
+
+
+Dirrecttory Link: C:\Program Files\MongoDB\Server\6.0\data\
+
+Log Directory Link: C:\Program Files\MongoDB\Server\6.0\log\
+
+
+
+mongodb://localhost:27017

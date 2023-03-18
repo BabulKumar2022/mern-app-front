@@ -22,24 +22,26 @@ const SignUp = () => {
     });
     result = await result.json();
     console.log(result);
+    // data store to local storage
+    localStorage.setItem("user",JSON.stringify(result))
     navigate("/")
   }
   return (
     <>
      
       <div className='register'>
-        <h2>Register</h2>
-        <input className='inputBox' type="text"  placeholder='Enter Name'
-        value={name} onChange={(e) => setName(e.target.value)}
-        />
-        <input className='inputBox' type="text"  placeholder='Enter Email'
-        value={email} onChange={(e) => setEmail(e.target.value)}
-        />
-        <input className='inputBox' type="text"  placeholder='Enter Password'
-        value={password} onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={getData} className='signButton'>Sign Up</button>
-    </div>
+          <h2>Register</h2>
+          <input className='inputBox' type="text"  placeholder='Enter Name'
+          value={name} onChange={(e) => setName(e.target.value)}
+          />
+          <input className='inputBox' type="text"  placeholder='Enter Email'
+          value={email} onChange={(e) => setEmail(e.target.value)}
+          />
+          <input className='inputBox' type="text"  placeholder='Enter Password'
+          value={password} onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={getData} className='signButton'>Sign Up</button>
+      </div>
     </>
 
   )

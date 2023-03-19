@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./SingUp.css"
 
@@ -8,7 +8,13 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() =>{
+    const auth = localStorage.getItem('user');
+    if(auth){
+      navigate('/');
+    }
 
+  },[])
   
 
   const getData = async() =>{

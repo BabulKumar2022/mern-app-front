@@ -1,10 +1,11 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateComponent = () => {
-  return (
-    <Outlet/>
-  )
+  const auth = localStorage.getItem('user');
+
+  return  <Outlet/> 
+ 
 }
 
-export default PrivateComponent
+export default PrivateComponent;

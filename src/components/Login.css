@@ -1,0 +1,23 @@
+.login{
+    margin-left: 33%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    
+     
+    }
+    .inputBox{
+        padding: 7px;
+        display: block;
+        border: 1px solid skyblue;
+        width: 300px;
+        margin: 10px;
+    }
+    .signButton{
+    margin: 15px;
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(17, 172, 120);
+    border: 1px solid skyblue;
+    cursor: pointer;
+    }

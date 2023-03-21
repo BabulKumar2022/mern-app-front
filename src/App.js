@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
 import PrivateComponent from './components/PrivateComponent';
+import Login from './components/Login';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/logout" element={<h2>Logout</h2>}/>
             <Route path="/profile" element={<h2>Profile</h2>}/>
             <Route path="/signup" element={<SignUp/>}/>
+            <Route path="/login" element={<Login/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -10,7 +10,6 @@
     width: 100%;
   }
 
-
   .nav-ul li a{
     color: white;
     text-decoration: none;
@@ -24,4 +23,22 @@
   }
   .sign-log{
    text-align: end;
+  }
+  .userName{
+    margin-right: 15px;
+    background-color: rgb(7, 7, 7);
+    padding:0px 5px;
+    border-radius: 5px;
+  }
+  .logo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 3px;
+    position: absolute;
+  
+  }
+  .nav-ul li:nth-child(1){
+    margin-left: 35px;
   }

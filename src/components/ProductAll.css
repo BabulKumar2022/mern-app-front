@@ -1,0 +1,13 @@
+.product-all{
+    text-align: center;
+    margin-top: 50px;
+}
+.product-all ul{
+list-style: none;
+}
+.product-all ul li{
+display: inline-block;
+width: 150px;
+border: 1px solid rebeccapurple;
+padding: 5px;
+}

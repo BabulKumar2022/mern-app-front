@@ -1,28 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SingUp.css'
 import {  toast } from 'react-toastify';
+import { useParams, useNavigate} from 'react-router-dom';
 
-const AddProduct = () => {
+const Update= () => {
 
     const [name, setName]=React.useState('');
     const [price, setPrice]=React.useState('');
     const [category, setCategory]=React.useState('');
     const [company, setCompany]=React.useState('');
     const [ac, setAc]=React.useState('');
-    const addProduct = async()=>{
-        // console.log(name, price, category, company);
-        const userId = JSON.parse(localStorage.getItem('user'))._id;
-        // console.log(userId);
-        let result = await fetch("http://localhost:5000/addProduct", {
-            method: "POST",
-            body: JSON.stringify({name, price, category, ac, company, userId}),
-            headers: {
+    const params = useParams();
+    const navigate = useNavigate();
+
+    
+    useEffect(()=>{
+        getProductDetails();
+    },[]);
+
+    const getProductDetails = async()=>{
+        // console.log(params)
+        let result = await fetch(`http://localhost:5000/products/${params.id}`)
+        result = await result.json();
+        // console.log(result);
+        setName(result.name);
+        setPrice(result.price);
+        setCategory(result.category);
+        setAc(result.ac);
+        setCompany(result.company)
+    }
+
+
+    const updateProduct = async()=>{
+        // console.log(name, price, category, ac, company)
+        let result = await fetch(`http://localhost:5000/products/${params.id}`,{
+            method: "PUT",
+            body:JSON.stringify({name, price, category, ac, company}),
+            headers:{
                 "Content-type": "application/json"
             }
         });
         result = await result.json();
-        console.log(result);
-        toast("Product Add Successfully");
+        // console.log(result);
+        toast("Product Update Successfully");
+        if(result){
+            navigate("/")
+        }
+        
 
     }
 
@@ -30,7 +54,7 @@ const AddProduct = () => {
   return (
     <div>
         <div className='register'>
-            <h2>Add New Product</h2>
+            <h2>Update Product</h2>
             <input className='inputBox' type="text"  placeholder=' Name'
             value={name} onChange={(e) => setName(e.target.value)}
             />
@@ -49,11 +73,11 @@ const AddProduct = () => {
             <input className='inputBox' type="text"  placeholder=' company name'
             value={company} onChange={(e) => setCompany(e.target.value)}
             />
-            <button  onClick={addProduct } className='signButton'>SUBMIT</button>
+            <button  onClick={updateProduct } className='signButton'>UPDATE</button>
         </div>
     </div>
 
   )
 }
 
-export default AddProduct;
+export default Update;

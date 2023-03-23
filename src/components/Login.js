@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Login.css"
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [email, setEmail] = React.useState('');
@@ -28,6 +29,7 @@ const Login = () => {
     if(result.name){
       localStorage.setItem("user", JSON.stringify(result));
       navigate('/');
+      toast("Login Success");
     }else{
       alert("Please enter connect details")
     }

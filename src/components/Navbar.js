@@ -18,7 +18,7 @@ const Navbar = () => {
             <li><Link to="/">All product</Link></li>
             <li><Link to="/addProduct">Add</Link></li>
             <li><Link to="/update">Update</Link></li>
-            <li><Link  to="/profile">Profile</Link></li>
+            <li><Link  to="/newLetter">New Letter</Link></li>
             <li ><Link onClick={logout} to="/signup"> <span className='userName'>{JSON.parse(auth).name}</span> Logout </Link> </li>
            </ul>
               :

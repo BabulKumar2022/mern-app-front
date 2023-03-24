@@ -8,6 +8,10 @@ import Login from './components/Login';
 import AddProduct from './components/AddProduct';
 import ProductAll from './components/ProductAll';
 import Update from './components/Update';
+import NewLetter from './components/NewLetter';
+
+
+
 
 
 function App() {
@@ -21,7 +25,7 @@ function App() {
             <Route path="/addProduct" element={<AddProduct/>}/>
             <Route path="/update/:id" element={<Update/>}/>
             <Route path="/logout" element={<h2>Logout</h2>}/>
-            <Route path="/profile" element={<h2>Profile</h2>}/>
+            <Route path="/newLetter" element={<NewLetter/>}/>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
           </Route>

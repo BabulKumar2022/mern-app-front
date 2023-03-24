@@ -8,12 +8,14 @@ const ProductAll = () => {
     useEffect(()=>{
         getProducts();
     },[]);
+
+// get all product API
     const getProducts = async ()=>{
         let result = await fetch("http://localhost:5000/products");
         result = await result.json();
         setProducts(result);
     };
-    console.log(products);
+    // console.log(products);
 
 
 
@@ -32,12 +34,25 @@ const ProductAll = () => {
         getProducts();
       }
     }
+// search function
 
-
+    const searchHandle = async (event)=>{
+      let key = event.target.value;
+      console.log( event.target.value)
+      let result = await fetch(`http://localhost:5000/search/${key}`)
+          result = await result.json();
+       
+          if(result){
+            setProducts(result);
+          }
+          // console.log(result)
+  }
 
 
   return (
     <div className='product-all'>
+      <h3>Search AC</h3>
+     <input onChange={searchHandle} type="text" className='searchBox' placeholder='Input AC'/>
       <h2>Number Of Product : ( {products.length} )</h2>  
         <ul>
             <li>S. no</li>
@@ -55,7 +70,7 @@ const ProductAll = () => {
                 <li>{item.price}</li>
                 <li>{item.category}</li>
                 <li>{item.ac}</li>
-                <li><button onClick={()=>deleteProduct(item.ac)}>Delete</button> <Link to={`/update/${item._id}`}>UPDATE</Link>  </li>
+                <li><button onClick={()=>deleteProduct(item._id)}>Delete</button> <Link to={`/update/${item._id}`}>UPDATE</Link>  </li>
             </ul>
             
             )

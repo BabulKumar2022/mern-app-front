@@ -30,11 +30,11 @@ const Update= () => {
         setCompany(result.company)
     }
 
-
+// send data UI to server API
     const updateProduct = async()=>{
         // console.log(name, price, category, ac, company)
-        let result = await fetch(`http://localhost:5000/products/${params.id}`,{
-            method: "PUT",
+        let result = await fetch("http://localhost:5000/addProduct2",{
+            method: "POST",
             body:JSON.stringify({name, price, category, ac, company}),
             headers:{
                 "Content-type": "application/json"

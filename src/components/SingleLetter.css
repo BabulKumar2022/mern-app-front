@@ -1,4 +1,25 @@
 .letter-area{
-    height: 1200px;
+    height: 1055px;
     background-color: aquamarine;
+}
+.letter-logo{
+ display: inline;
+width: 150px;
+height: 150px;
+
+
+}
+.header-text{
+    text-align: center;
+}
+.header-area{
+    display: flex;
+    justify-content: center;
+}
+.name-address{
+    text-align: left;
+    margin-left: 20px;
+}
+.name-address p{
+line-height: 10px;
 }

@@ -8,9 +8,10 @@ list-style: none;
 }
 .product-all ul li{
 display: inline-block;
-width: 150px;
+width: 60px;
 border: 1px solid rebeccapurple;
 padding: 5px;
+font-size: 10px;
 }
 .searchBox{
     padding: 7px;

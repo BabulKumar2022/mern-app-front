@@ -57,8 +57,15 @@ const ProductAll = () => {
         <ul>
             <li>S. no</li>
             <li>Name: </li>
-            <li>Price: </li>
-            <li>Category: </li>
+            <li>F-Name: </li>
+            <li>Village: </li>
+            <li>Post: </li>
+            <li>Upozela: </li>
+            <li>Zila: </li>
+            <li>isuDate: </li>
+            <li>meserDate: </li>
+            <li>lastDate: </li>
+            <li>pfValue: </li>
             <li>AC: </li>
             <li>Operation: </li>
         </ul>
@@ -67,8 +74,15 @@ const ProductAll = () => {
             <ul key={item._id}>
                 <li>{index+1}</li>
                 <li>{item.name}</li>
-                <li>{item.price}</li>
-                <li>{item.category}</li>
+                <li>{item.fatherName}</li>
+                <li>{item.village}</li>
+                <li>{item.post}</li>
+                <li>{item.upozila}</li>
+                <li>{item.zila}</li>
+                <li>{item.isuDate}</li>
+                <li>{item.meserDate}</li>
+                <li>{item.lastDate}</li>
+                <li>{item.pfValue}</li>
                 <li>{item.ac}</li>
                 <li><button onClick={()=>deleteProduct(item._id)}>Delete</button> <Link to={`/update/${item._id}`}>UPDATE</Link>  </li>
             </ul>

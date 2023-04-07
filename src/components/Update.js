@@ -70,23 +70,22 @@ const Update= () => {
     <div>
         <div className='register'>
             <h2>Update Product</h2>
-            <input className='inputBox' type="text"  placeholder=' Name'
+            <input className='inputBox' type="text" disabled  placeholder=' Name'
             value={name} onChange={(e) => setName(e.target.value)}
             />
-
-<input className='inputBox' type="text"  placeholder=' Father Name'
+            <input className='inputBox' type="text"  disabled placeholder=' Father Name'
             value={fatherName} onChange={(e) => setFatherName(e.target.value)}
             />
-            <input className='inputBox' type="text"  placeholder=' Village Name'
+            <input className='inputBox' type="text" disabled placeholder=' Village Name'
             value={village} onChange={(e) => setVillage(e.target.value)}
             />
-            <input className='inputBox' type="text"  placeholder=' Name of post'
+            <input className='inputBox' type="text" disabled  placeholder=' Name of post'
             value={post} onChange={(e) => setPost(e.target.value)}
             />
-            <input className='inputBox' type="text"  placeholder=' Upozila'
+            <input className='inputBox' type="text" disabled  placeholder=' Upozila'
             value={upozila} onChange={(e) => setUpozila(e.target.value)}
             />
-            <input className='inputBox' type="text"  placeholder=' Zila'
+            <input className='inputBox' type="text" disabled  placeholder=' Zila'
             value={zila} onChange={(e) => setUZila(e.target.value)}
             />
 
@@ -99,7 +98,7 @@ const Update= () => {
             <input className='inputBox' type="text"  placeholder=' Last date'
             value={lastDate} onChange={(e) => setLastDate(e.target.value)}
             />
-            <input className='inputBox' type="text"  placeholder=' AC'
+            <input className='inputBox' type="text" disabled  placeholder=' AC'
             value={ac} onChange={(e) => setAc(e.target.value)}
             />
 

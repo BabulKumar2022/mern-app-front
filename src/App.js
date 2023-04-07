@@ -9,6 +9,7 @@ import AddProduct from './components/AddProduct';
 import ProductAll from './components/ProductAll';
 import Update from './components/Update';
 import NewLetter from './components/NewLetter';
+import Xle from './components/Xle';
 
 
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/update/:id" element={<Update/>}/>
             <Route path="/logout" element={<h2>Logout</h2>}/>
             <Route path="/newLetter" element={<NewLetter/>}/>
+            <Route path="/xle" element={<Xle/>}/>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
           </Route>

@@ -1,6 +1,6 @@
 .letter-area{
-    height: 1055px;
-    background-color: aquamarine;
+    height: 950px;
+    /* background-color: aquamarine; */
     margin: 50px;
 }
 .letter-logo{
@@ -12,7 +12,7 @@ left: 0;
 }
 .logo2{
     width: 125px; 
-    margin-left: 50px;
+    margin-left: 90px;
     margin-top: 15px;
 
  
@@ -42,9 +42,9 @@ line-height: 10px;
 }
 .subject p{
     text-align: left;
-    margin-left: 50px;
+    margin-left: 15px;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: underline;
 }
 .letter-body p{
@@ -67,8 +67,11 @@ margin-top: 5px;
 }
 .onulipi p{
     text-align: left;
+    line-height: 10px;
    
 }
 .dgm-name{
+    text-align: center;
     margin-right: 100px;
+    line-height: 10px;
 }
